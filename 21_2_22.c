@@ -9,6 +9,8 @@ int main(){
 	printf("product %d",(a*b));
 	printf("modules %d",(a%b));
 	printf("division %d",(a/b));
+
+	return 0;
 }
 
 
