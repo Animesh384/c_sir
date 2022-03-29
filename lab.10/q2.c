@@ -49,14 +49,13 @@ i=1   1        4
 #include<stdio.h>
 int main(){
     int m;
-    printf("enter a numer :");
+    printf("Enter a Number :");
     scanf("%d",&m);
     for(int j=0;j<m;j++){
         for(int i=0;i<(j+1);i++)
         printf("$");
         for(int i=0;i<(m-1-j);i++)
         printf(" ");
-       
         for(int i=0;i<(j+1);i++)
         printf("$");
         for(int i=0;i<(m-1-j);i++)
