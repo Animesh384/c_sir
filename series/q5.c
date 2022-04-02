@@ -6,7 +6,8 @@ int main(){
     printf("enter a number:");
     scanf("%d",&n);
     float j=0;
-    for(int i=1;i<=n;i++){
+    int i=1;
+    while(i<=n){
         //sum=(i%2==0?sum+i/(n-j):sum+(n-j)/i);
         if(i%2==0){
             sum=sum+i/(n-j);
@@ -19,6 +20,7 @@ int main(){
         }
 
         j+=2;
+        i++;
     }
     printf("\b=%.4f\n",sum);
     return(0);

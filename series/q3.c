@@ -6,9 +6,11 @@ int main(){
     printf("enter a number:");
     scanf("%d",&n);
     printf("1");
-    for(int i=2;i<=n;i++){
+    int i=2;
+    while(i<=n){
         sum=sum*i;
         printf("*%d",i);
+        i++;
 
     }
     printf("=%.f",sum);

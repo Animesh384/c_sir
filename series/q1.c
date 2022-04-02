@@ -5,8 +5,10 @@ int main(){
     float sum=0;
     printf("enter a number:");
     scanf("%d",&n);
-    for(int i=3;i<=n;i+=2){
+    int i=3;
+    while(i<=n){
         sum=sum+1.0/i;
+        i+=2;
 
     }
     printf("series sum 1/3 + 1/5 + 1/7 ....=%f",sum);
