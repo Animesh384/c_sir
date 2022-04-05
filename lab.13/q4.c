@@ -10,8 +10,12 @@ return(gcd(m,n%m));
 
 }
 int main(){
-    int x=gcd(45,4);
-    printf("%d",x);
+    int x,y;
+    printf("enteer a two number x,y:");
+    scanf("%d,%d",&x,&y);
+    int z=gcd(x,y);
+    printf("gcd of two %d,%d number:",x,y);
+    printf("%d",z);
 
 
 }

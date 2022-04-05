@@ -8,6 +8,9 @@ int power(int a,int n){
 }
 
 int main(){
-    int x=power(6,3);
+    int a,b;
+    printf("enter a a^b:");
+    scanf("%d^%d",&a,&b);
+    int x=power(a,b);
     printf("%d",x);
 }
