@@ -11,17 +11,20 @@ int main(){
     printf("enter a number to be search:");
     scanf("%d",&s);
     int j;
-    for(j=19;j>=0;j++){
+    for(j=19;j>=0;j--){
     if(s==a[j]){
+
         po=j;
+        //printf("position:%d",po);
         break;
     }
-    if(j>0)
-    printf("position:%d",j);
-    else
-    printf("not found");
+    
 
 
     }
+    if(po>=0)
+    printf("position:%d",po+1);
+    else
+    printf("not found");
     
 }
