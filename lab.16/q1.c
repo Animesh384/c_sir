@@ -12,7 +12,7 @@ int main(){
         for(int k=0;k<3;k++){
             sum=0;
         for(int j=0;j<3;j++){
-            sum=sum+a[i][j]*a1[j][i];
+            sum=sum+a[i][j]*a1[j][k];
         }
         a2[i][k]=sum;
         }
