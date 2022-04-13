@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//hello world
 int main(){
     int n;
     float sum=0;
