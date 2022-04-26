@@ -23,7 +23,7 @@ int main(){
 
     }
      for(int i=0;i<10;i++){
-           printf("%u %d %d\n",(a+i),(&a+i),*(a+i));
+           printf("%u `%d` %d\n",(a+i),(&a+i),*(a+i));
 
     }
 
@@ -31,19 +31,19 @@ int main(){
     int  b[2][2]={{1,2},{3,4}};
     for(int i=0;i<2;i++){
         for(int j=0;j<2;j++){
-            printf("%u %u %u :%d\n",(&b+i),b+i,*(b+i)+j,*(*(b+i)+j));
+            printf("`%u` %u %u :%d\n",(&b+i),b+i,*(b+i)+j,*(*(b+i)+j));
         }
     }
-     char  b1[2][2]={{1,2},{3,4}};
+     char  b1[2][2]={{1,2},{3,'4'}};
     for(int i=0;i<2;i++){
         for(int j=0;j<2;j++){
-            printf("%u %u %u :%c\n",(&b1+i),b1+i,*(b1+i)+j,*(*(b1+i)+j));
+            printf("`%u` %u %u :%c\n",(&b1+i),b1+i,*(b1+i)+j,*(*(b1+i)+j));
         }
     }
      double b2[2][2]={{1.1,2.3},{3.4,4.6}};
     for(int i=0;i<2;i++){
         for(int j=0;j<2;j++){
-            printf("%u %u %u : %.f\n",(&b2+i),b2+i,*(b2+i)+j,*(*(b2+i)+j));
+            printf("`%u` %u %u : %.f\n",(&b2+i),b2+i,*(b2+i)+j,*(*(b2+i)+j));
         }
     }
 
