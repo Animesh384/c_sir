@@ -17,8 +17,8 @@ t++;
 printf("velocity at t=3:%f\n",u+g*t);
 printf("distance at t=3:%f\n",u*t+(g*t*t)/2);
 t++;
-printf("velocity at t=4:%f\n",u+g*t);
-printf("distance at t=4:%f\n",u*t+(g*t*t)/2);
+printf("velocity at t=4:%.3f\n",u+g*t);
+printf("distance at t=4:%.3f\n",u*t+(g*t*t)/2);
 
 
 }
