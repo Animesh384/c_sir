@@ -4,6 +4,10 @@
 struct emp
 {
  char ename[100];
+ char gender[1];
+ char disgnation[100];
+ char department[100];
+ float pay;
  
 };
 
@@ -17,13 +21,13 @@ struct emp* p1=(struct emp*)malloc(n*sizeof(struct emp));
 struct emp* temp;
 for (int i=0;i<n;i++){
 temp=p1+i;
-scanf("\n%[^\n]s",&temp->ename);
+scanf(" %[^\n]s",&temp->ename);
 printf("%s",temp->ename);
-scanf("\n%[^\n]s",&temp->gender);
+scanf(" %[^\n]s",&temp->gender);
 printf("%s",temp->gender);
-scanf("\n%[^\n]s",&temp->disgnation);
+scanf(" %[^\n]s",&temp->disgnation);
 printf("%s",temp->disgnation);
-scanf("\n%[^\n]s",&temp->department);
+scanf(" %[^\n]s",&temp->department);
 printf("%s",temp->department);
 scanf("%f",&temp->pay);
 printf("%f",temp->pay);

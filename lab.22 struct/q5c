@@ -1,0 +1,110 @@
+#include<stdio.h>
+#include<string.h>
+
+void bubbleSort(int *arr, int n1)
+{
+    for (int j=0; j<(n1-1); j++)
+    {
+        for (int i=0; i<(n1-1-j); i++)
+        {
+            int temp = 0;
+            if (arr[i]>arr[i+1])
+            {
+                temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
+        }
+}
+}
+int main()
+{
+    struct library
+    {
+        int acc;
+        char title[100];
+        char auth[100];
+        int price;
+        int flag;
+    } book[100];
+
+    int choice, exit=0;
+    int count=0;
+    while(exit != 1)
+    {
+    printf("1.ADD BOOK INFORMATION\n2.DISPLAY BOOK INFORMATION\n3.LIST ALL BOOKS OF THE GIVEN AUTHOR\n4.LIST THE TITLE OF SPECIFIED BOOK\n5.LIST THE COUNT OF THE BOOK IN LIBRARY\n6.LIST THE BOOKS IN THE ORDER OF ACCESSION NUMBER\n7.EXIT()\n");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1:
+            printf("HELLO\n");
+            scanf("%d %s %s %d %d",&book[count].acc, &book[count].title, &book[count].auth, &book[count].price, &book[count].flag);
+            count++;
+        break;
+        case 2:
+            for(int j=0; j<count; j++)
+            {
+               printf("%d %s %s %d %d\n",book[j].acc, book[j].title, book[j].auth, book[j].price, book[j].flag);
+            }
+        break;
+        case 3:
+            char author[100];
+            printf("ENTER THE NAME OF THE AUTHOR :-\n");
+            scanf("%s",&author);
+
+            for(int j=0; j<count; j++)
+            {
+                if (strcmp(book[j].auth,author) == 0)
+                printf("%d %s %s %d %d\n",book[j].acc, book[j].title, book[j].auth, book[j].price, book[j].flag);
+            }
+            break;
+        case 4:
+            char title[100];
+            printf("ENTER THE NAME OF THE AUTHOR :-\n");
+            scanf("%s",&title);
+
+            for(int j=0; j<count; j++)
+            {
+                if (strcmp(book[j].title,title) == 0)
+                printf("%d %s %s %d %d\n",book[j].acc, book[j].title, book[j].auth, book[j].price, book[j].flag);
+            }
+            break;
+        case 5:
+            printf("THE NUMBER OF BOOKS IN THE LIBRARY IS :- %d\n",count);
+            break;
+        case 6:
+        int ac[100];
+            for(int j=0; j<count; j++)
+            {
+                ac[j] = book[j].acc;
+                //printf("%d %s %s %d %d\n",book[j].acc, book[j].title, book[j].auth, book[j].price, book[j].flag);
+            }
+            bubbleSort(&ac,count);
+
+/*              for(int j=0; j<count;j++)
+            {
+                printf("%d ",ac[j]);
+            }  */
+
+            for(int j=0; j<count; j++)
+            {
+                for(int k=0; k<count; k++)
+                {
+                    if (ac[j] == book[k].acc)
+                    {
+                    printf("%d %s %s %d %d\n",book[k].acc, book[k].title, book[k].auth, book[k].price, book[k].flag);
+                    break;
+                    }
+                }
+            }
+            break;
+        case 7:
+            exit = 1 ;
+            break;
+        default:
+            printf("YOU HAVE ENTERED A WRONG CHOICE :- ");
+            break;
+        }
+    }
+    return 0;
+}
