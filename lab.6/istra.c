@@ -10,14 +10,6 @@ int main(){
     printf("\ninput values:%d,%d,%d\n",i,j,k);
     t=((i+j)>k)&&((i+k)>j)&&((k+j)>i);
     printf("\nis this is a triangle:%d\n",t);
-    
-
-   
-    
-
-    
-
-
 
     return 0;
 
