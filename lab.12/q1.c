@@ -1,4 +1,4 @@
-#include<stdio.h>
+a#include<stdio.h>
 void uchar(char ch){
     if((int)ch>=97&&(int)ch<=122){
         ch=ch-32;
