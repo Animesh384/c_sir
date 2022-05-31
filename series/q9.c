@@ -2,7 +2,7 @@
 
 int main(){
     int n;
-    float sum=1;
+    float sum=1,ut;
     printf("enter a number:");
     scanf("%d",&n);
     int i=1;
@@ -13,9 +13,10 @@ int main(){
         sum=sum/(sum*i);
         printf("%d!+",i);
         i++;
+        ut+=sum;
 
     }
-    printf("\b=%.5f",sum);
+    printf("\b=%.5f",ut);
     return(0);
 
 }
